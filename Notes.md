@@ -45,3 +45,10 @@
 
 * does native C++ run without interruptions?
 * write C# loaded picture to file in C++ / data transfer works
+
+# Thoughts
+
+* Data that crosses the managed / unmanaged boundary is a risk.
+The picture should have been loaded by opencv - the image classes are not compatible and a costly copy is needed.
+
+* ONNX and OpenCV, but not Yolo: it seems that the referrred YOLO project only uses YOLO models, but the execution is totally based on the combination OpenCV (for the image part) and ONNX (for the neural network part). In addition, the cpp part reads the class names and uses them to paint the bounding boxes and annotate the picture.
