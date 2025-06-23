@@ -34,6 +34,7 @@
             pictureBox1 = new PictureBox();
             splitContainer1 = new SplitContainer();
             pictureBox2 = new PictureBox();
+            modelPathToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
@@ -45,7 +46,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { gjenkjennToolStripMenuItem, imageToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { modelPathToolStripMenuItem, gjenkjennToolStripMenuItem, imageToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -54,6 +55,7 @@
             // 
             // gjenkjennToolStripMenuItem
             // 
+            gjenkjennToolStripMenuItem.Enabled = false;
             gjenkjennToolStripMenuItem.Name = "gjenkjennToolStripMenuItem";
             gjenkjennToolStripMenuItem.Size = new Size(72, 20);
             gjenkjennToolStripMenuItem.Text = "Gjenkjenn";
@@ -103,6 +105,13 @@
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
+            // modelPathToolStripMenuItem
+            // 
+            modelPathToolStripMenuItem.Name = "modelPathToolStripMenuItem";
+            modelPathToolStripMenuItem.Size = new Size(80, 20);
+            modelPathToolStripMenuItem.Text = "Model path";
+            modelPathToolStripMenuItem.Click += modelPathToolStripMenuItem_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -133,5 +142,6 @@
         private SplitContainer splitContainer1;
         private PictureBox pictureBox2;
         private ToolStripMenuItem gjenkjennToolStripMenuItem;
+        private ToolStripMenuItem modelPathToolStripMenuItem;
     }
 }

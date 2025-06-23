@@ -24,6 +24,18 @@
     <ClInclude Include="MigrateImage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="YoloCpp\Debug.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="YoloCpp\ScopedTimer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="YoloCpp\YOLO12.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="YoloCpp\YOLO11.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FirstTest.cpp">

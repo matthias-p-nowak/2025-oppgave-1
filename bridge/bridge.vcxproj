@@ -118,6 +118,10 @@
     <ClInclude Include="DetectFromImage.h" />
     <ClInclude Include="FirstTest.h" />
     <ClInclude Include="MigrateImage.h" />
+    <ClInclude Include="YoloCpp\Debug.hpp" />
+    <ClInclude Include="YoloCpp\ScopedTimer.hpp" />
+    <ClInclude Include="YoloCpp\YOLO11.hpp" />
+    <ClInclude Include="YoloCpp\YOLO12.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DetectFromImage.cpp" />

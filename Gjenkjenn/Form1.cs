@@ -1,10 +1,12 @@
 using System.Diagnostics;
+using Windows.Services.Maps.OfflineMaps;
 
 namespace Gjenkjenn
 {
     public partial class Form1 : Form
     {
         private Image? img;
+        private string? modelPath;
 
         public Form1()
         {
@@ -49,6 +51,7 @@ namespace Gjenkjenn
             {
                 ofd.Title = "Select an image to detect from";
                 ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif|All Files|*.*";
+                
                 ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
@@ -62,11 +65,11 @@ namespace Gjenkjenn
                         pictureBox1.Image = bmp;
                         Task.Run(() =>
                         {
-                            var dtf = new DetectFromImage();
-                            dtf.DetectAndAnnotate(bmp);
+                            var dtf = new DetectFromImage(modelPath);
+                            var result=dtf.DetectAndAnnotate(bmp);
                             pictureBox2.BeginInvoke(() =>
                             {
-
+                                pictureBox2.Image = result;
                             });
                         });
                         //var ft = new FirstTest();
@@ -80,6 +83,20 @@ namespace Gjenkjenn
                 }
             }
 
+        }
+
+        private void modelPathToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var fbd = new FolderBrowserDialog())
+            {
+                fbd.Description = "Select folder with model file";
+                fbd.ShowNewFolderButton = false;
+                if (fbd.ShowDialog() == DialogResult.OK)
+                {
+                    this.modelPath=fbd.SelectedPath;
+                    this.gjenkjennToolStripMenuItem.Enabled = true;
+                }
+            }
         }
     }
 }
