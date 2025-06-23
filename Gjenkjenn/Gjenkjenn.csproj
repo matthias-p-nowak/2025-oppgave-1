@@ -11,15 +11,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.22.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\bridge\bridge.vcxproj" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /Y /D &quot;$(SolutionDir)\3rdparty\opencv\build\x64\vc16\bin\*.dll&quot;  $(OutDir)&#xD;&#xA;xcopy /Y /D &quot;$(SolutionDir)\3rdparty\opencv\build\x64\vc16\bin\*.pdb&quot;  $(OutDir)" />
+    <Exec Command="xcopy /Y /D &quot;$(SolutionDir)\3rdparty\opencv\build\x64\vc16\bin\*.dll&quot;  $(OutDir)&#xD;&#xA;xcopy /Y /D &quot;$(SolutionDir)\3rdparty\opencv\build\x64\vc16\bin\*.pdb&quot;  $(OutDir)&#xD;&#xA;xcopy /Y /D &quot;$(SolutionDir)\3rdparty\onnx\lib\*.dll&quot; $(OutDir)&#xD;&#xA;xcopy /Y /D &quot;$(SolutionDir)\3rdparty\onnx\lib\*.pdb&quot; $(OutDir)" />
   </Target>
 
 </Project>

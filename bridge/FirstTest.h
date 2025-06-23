@@ -6,6 +6,8 @@ using namespace System;
 public ref class FirstTest
 {
 public:
-	void transfer(Bitmap^ img);
+	Bitmap^ transfer(Bitmap^ img);
+private:
+	//cv::Mat* currentPicture;
 };
 

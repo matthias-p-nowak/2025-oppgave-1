@@ -18,9 +18,21 @@
     <ClInclude Include="FirstTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DetectFromImage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MigrateImage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FirstTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DetectFromImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MigrateImage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
