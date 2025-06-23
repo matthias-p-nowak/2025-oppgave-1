@@ -1,0 +1,37 @@
+1. error MSB4278:
+2. i want to use Onnx from C++ in a visual studio project
+3. in C# i am using a class from a C++ project, how is the use statement?
+4. Severity	Code	Description	Project	File	Line	Suppression State	Details
+Error (active)	CS0122	'FirstTest' is inaccessible due to its protection level	Gjenkjenn	C:\Jobb\github\2025-oppgave-1\Gjenkjenn\Form1.cs	12
+5. in c++/cLR i want to access a function from OpenCV2
+6. explain the ^ in static void ShowImage(String^ imagePath)
+7. i am compiling a C++ CLR project linked to opencv.lib, but my output directory does not contain the dll
+8. can i use wildcards in visual studio post build events?
+9. does C++/CLR have access to Drawing.Image?
+10. convert a Image to a cv::Mat
+11. i =need to add a reference to Drawing version 8 but got version 9
+12. i cannot add the system drawing version 8 to my c++/CLR project because it is not the right type or version
+13. where do i find system drawing common version 8?
+14. C#, Filedialog, search for an image file and return the path
+15. has C++/CLI garbage collection?
+16. opencv2 image.clone(), do i need to delete that object?
+17. i want to assign it to a member element
+18. how can i move an imagebox to a splitpanel in visual studio designer?
+19. in openCV, i want to put a red ellipse into a picture, generate the C++ code
+20. i have a cv::Mat and want to send back a Drawing.Bitmap
+21. in order to use ONNX from C++/CLI, what do i need to install?
+22. what is included in Microsoft.ml.onnxruntime nuget package?
+23. ok, i need to use it in C++
+24. explain the following line to me
+bool isDynamicInputShape{};
+25. how does it work with non default initialization?
+26. show me an open file dialog for directories in C#
+27. C++/cli E1047
+28. Declaration is incompatible - i have a constructor with String
+29. how do i assign a member field in the constructor in C++
+30. how do i turn String^ to string in C++
+31. where is std::min defined?
+32. how do i get wchar_t * from a String^ object?
+33. is there try finally in C++?
+34. can i share a file from onedrive?
+35. Please give me a list of all my questions without your answers.
