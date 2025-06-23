@@ -3,15 +3,24 @@
 #include <opencv2/opencv.hpp>
 
 using namespace System;
+using namespace System::Diagnostics;
+using namespace System::Drawing;
+using namespace System::Drawing::Imaging;
 
-void FirstTest::ping() {
-	std::cout << "got a ping" << std::endl;
-	cv::Mat image = cv::imread("C:\\temp\\car.jpg");
-	cv::imshow("testing", image);
-	std::cout << "image from path read" << std::endl;
-}
 
-void FirstTest::transfer(Image^ img)
+void FirstTest::transfer(Bitmap^ bmp)
 {
-	std::cout << "got an image, converting..." << std::endl;
+	Debug::WriteLine("got an image");
+    Rectangle rect = Rectangle(0, 0, bmp->Width, bmp->Height);
+    BitmapData^ bmpData = bmp->LockBits(rect, ImageLockMode::ReadOnly, PixelFormat::Format24bppRgb);
+
+    // Create cv::Mat using the pixel buffer
+    cv::Mat mat(bmp->Height, bmp->Width, CV_8UC3, bmpData->Scan0.ToPointer(), bmpData->Stride);
+
+    // Clone to make a deep copy (bitmap may go out of scope)
+    cv::Mat result = mat.clone();
+
+    // Unlock the bits
+    bmp->UnlockBits(bmpData);
+    //cv::imshow("transferred", result);
 }
