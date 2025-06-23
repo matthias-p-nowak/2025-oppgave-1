@@ -30,12 +30,13 @@
         {
             menuStrip1 = new MenuStrip();
             testToolStripMenuItem = new ToolStripMenuItem();
+            imageToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { testToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { imageToolStripMenuItem, testToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -48,6 +49,13 @@
             testToolStripMenuItem.Size = new Size(39, 20);
             testToolStripMenuItem.Text = "Test";
             testToolStripMenuItem.Click += testToolStripMenuItem_Click;
+            // 
+            // imageToolStripMenuItem
+            // 
+            imageToolStripMenuItem.Name = "imageToolStripMenuItem";
+            imageToolStripMenuItem.Size = new Size(52, 20);
+            imageToolStripMenuItem.Text = "Image";
+            imageToolStripMenuItem.Click += imageToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -68,5 +76,6 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem testToolStripMenuItem;
+        private ToolStripMenuItem imageToolStripMenuItem;
     }
 }

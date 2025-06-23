@@ -17,6 +17,7 @@
     - linked with supplied libraries
     - find out if this wrapper is necessary
 
+# 
 # TODO
 
 * which libraries to load
@@ -26,7 +27,7 @@
 
 * native C++ is unmanaged, new/delete, keep track of memory
 * C++/CLI:
-    - managed or unmanaged?
+    - managed?
 * transfer of picture
     - pin the object, so GC does not move it
     - unpin after use

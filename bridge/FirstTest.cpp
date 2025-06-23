@@ -10,3 +10,8 @@ void FirstTest::ping() {
 	cv::imshow("testing", image);
 	std::cout << "image from path read" << std::endl;
 }
+
+void FirstTest::transfer(Image^ img)
+{
+	std::cout << "got an image, converting..." << std::endl;
+}

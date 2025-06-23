@@ -12,5 +12,12 @@ namespace Gjenkjenn
             var ft = new FirstTest();
             ft.ping();
         }
+
+        private void imageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var img = Image.FromFile(@"C:\temp\car.jpg");
+            var ft= new FirstTest();
+            ft.transfer(img);
+        }
     }
 }
