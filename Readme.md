@@ -11,5 +11,6 @@ Real production code has to switch the license to a commercial one, with the imp
 
 # Build instructions
 
-* The 3rdparty directory needs to be there with the required content.
 * Bridge requires a nuget package with the correct version of System.Drawing.Image.
+* The 3rdparty directory needs to be there with the required content:
+	* Download from the adviced directory and unpack

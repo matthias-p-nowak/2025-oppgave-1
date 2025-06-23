@@ -8,3 +8,4 @@ obj/
 *.user
 3rdparty/
 bin/
+*.zip
