@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Gjenkjenn": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

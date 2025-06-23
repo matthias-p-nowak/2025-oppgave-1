@@ -10,6 +10,7 @@ namespace Gjenkjenn
         private void testToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var ft = new FirstTest();
+            ft.ping();
         }
     }
 }

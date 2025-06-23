@@ -18,4 +18,8 @@
     <ProjectReference Include="..\bridge\bridge.vcxproj" />
   </ItemGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /Y /D &quot;$(SolutionDir)\3rdparty\opencv\build\x64\vc16\bin\*.dll&quot;  $(OutDir)&#xD;&#xA;xcopy /Y /D &quot;$(SolutionDir)\3rdparty\opencv\build\x64\vc16\bin\*.pdb&quot;  $(OutDir)" />
+  </Target>
+
 </Project>
